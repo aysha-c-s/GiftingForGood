@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url('/images/img1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10%;
+    position: relative;
+    animation: swipe-down 0.7s ease-out forwards;
+}
+
+@keyframes swipe-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+nav ul li {
+    padding: 20px 20px;
+}
+
+
+.nav-link {
+    color: white !important;
+    font-size: 120%;
+
+}
+
+nav ul li a:hover {
+    color: crimson;
+    transition: .3s;
+}
+
+
+button {
+    border: none;
+    background: crimson;
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+    transition: .4s;
+}
+
+.button:hover {
+    background: darkred;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.w-100-height {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px; /* Increase padding for more space */
+    border-radius: 10px;
+    width: 90%; /* Increase width */
+    max-width: 1000px; /* Increase maximum width */
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: swipe-up 1s ease-out forwards;
+}
+
+@keyframes swipe-up {
+    from {
+        transform: translate(-50%, 100%); /* Start from below the screen */
+    }
+    to {
+        transform: translate(-50%, -50%); /* End at the center */
+    }
+}
+
+
+.carousel-caption h5, .carousel-caption p, .carousel-caption button {
+    color: white;
+}
+
+.carousel-caption p{
+    font-size: 120%;
+}
+
+.carousel-caption button {
+    background: crimson;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-caption button:hover {
+    background: darkred;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
