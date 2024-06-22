@@ -13,9 +13,49 @@ body {
     background-size: cover;
 }
 
-.navbar {
-    background: transparent;
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between items */
 }
+
+.navbar-collapse {
+    position: relative;
+}
+
+/* Navbar default state: transparent background */
+.navbar {
+    background-color: transparent;
+}
+
+/* Navbar-toggler border color */
+.navbar-toggler {
+    border-color:white!important; /* Adjust the color as needed */
+}
+
+/* When the navbar-collapse is shown, apply the white blur background */
+.navbar-collapse.show {
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the opacity as needed */
+    
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.2); /* Adjust the opacity as needed */
+        backdrop-filter: blur(10px);
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start; /* Adjust alignment for toggle menu */
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Adjust spacing between items */
+    }
+}
+
 
 .logo {
     width: 200px;
@@ -60,11 +100,6 @@ nav ul li {
 
 }
 
-nav ul li a:hover {
-    color: crimson;
-    transition: .3s;
-}
-
 
 button {
     border: none;
@@ -106,16 +141,20 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: swipe-up 1s ease-out forwards;
+    animation: swipe-in 3s ease-out forwards;
 }
 
 @keyframes swipe-up {
     from {
-        transform: translate(-50%, 100%); /* Start from below the screen */
+        right: 100%; /* Start off the screen on the right */
     }
     to {
-        transform: translate(-50%, -50%); /* End at the center */
+        right: 50%; /* End at 50% right */
     }
+}
+
+.carousel-item {
+    transition: transform 2s ease, opacity 1.5s ease;
 }
 
 
