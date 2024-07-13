@@ -8,10 +8,15 @@ body, html {
     overflow-x: hidden;
 }
 
-body {
-    background: url('/images/img1.jpg') no-repeat center center fixed;
-    background-size: cover;
+.navbar {
+    background: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+    padding: 5px 5px;
 }
+
 
 .navbar-nav {
     display: flex;
@@ -23,51 +28,20 @@ body {
     position: relative;
 }
 
-/* Navbar default state: transparent background */
-.navbar {
-    background-color: transparent;
-}
-
-/* Navbar-toggler border color */
-.navbar-toggler {
-    border-color:white!important; /* Adjust the color as needed */
-}
-
-/* When the navbar-collapse is shown, apply the white blur background */
-.navbar-collapse.show {
-    background-color: rgba(255, 255, 255, 0.2); /* Adjust the opacity as needed */
-    
-}
-
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        background-color: rgba(255, 255, 255, 0.2); /* Adjust the opacity as needed */
-        backdrop-filter: blur(10px);
-        padding: 10px;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start; /* Adjust alignment for toggle menu */
-    }
-
-    .nav-item {
-        margin-bottom: 10px; /* Adjust spacing between items */
-    }
+.navbar-brand img {
+    width: 80px; /* Adjust logo size */
+    height: auto;
 }
 
 
-.logo {
-    width: 200px;
-    height: 200px;
-}
 
 nav {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 10%;
     position: relative;
+    padding: 2px 2px;
     animation: swipe-down 0.7s ease-out forwards;
 }
 
@@ -86,35 +60,39 @@ nav ul {
     justify-content: center;
     flex-grow: 1;
     list-style-type: none;
+
     font-weight: bold;
+   
 }
 
 nav ul li {
-    padding: 20px 20px;
-}
+    padding: 10px 20px;
+    font-size: 150%;
 
+}
 
 .nav-link {
     color: white !important;
-    font-size: 120%;
-
+    transition: color 0.3s;
 }
 
+.nav-link:hover {
+    color:  crimson !important; /* Adjust hover color */
+}
 
-button {
-    border: none;
-    background: crimson;
-    padding: 10px 25px;
-    border-radius: 25px;
+.button {
+    background-color: crimson;
     color: white;
-    font-weight: bold;
-    font-size: 120%;
-    transition: .4s;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
     background: darkred;
 }
+
 
 .carousel-item {
     height: 100vh;
@@ -124,6 +102,7 @@ button {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    opacity: 0.7; /* Lower the opacity of the background image */
 }
 
 .carousel-caption {
@@ -141,28 +120,13 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: swipe-in 3s ease-out forwards;
 }
-
-@keyframes swipe-up {
-    from {
-        right: 100%; /* Start off the screen on the right */
-    }
-    to {
-        right: 50%; /* End at 50% right */
-    }
-}
-
-.carousel-item {
-    transition: transform 2s ease, opacity 1.5s ease;
-}
-
 
 .carousel-caption h5, .carousel-caption p, .carousel-caption button {
     color: white;
 }
 
-.carousel-caption p{
+.carousel-caption p {
     font-size: 120%;
 }
 
@@ -183,4 +147,173 @@ button {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%);
+}
+
+
+
+
+.about-section {
+    background: linear-gradient(to right, #f7f7f7, #eaeaea);
+    padding: 100px 0;
+    height: 100vh;
+}
+
+.about-img {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.about-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goals-section {
+    padding: 100px 0;
+    height: 100vh;
+    background-color: #f9f9f9;
+    animation: fade-in 1s ease-out forwards;
+}
+
+.goals-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Employees Section */
+.employees-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.employees-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+}
+
+.employees-section .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employees-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.employees-section .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.employees-section .card-body {
+    padding: 20px;
+}
+
+.employees-section .card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.employees-section .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.employees-section .btn {
+    background: crimson;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.employees-section .btn:hover {
+    background: darkred;
+}
+
+
+.footer-section {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: crimson;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
