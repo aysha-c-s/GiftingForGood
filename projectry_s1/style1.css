@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+    padding: 5px 5px;
+}
+
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between items */
+}
+
+.navbar-collapse {
+    position: relative;
+}
+
+.navbar-brand img {
+    width: 80px; /* Adjust logo size */
+    height: auto;
+}
+
+
+
+nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 2px 2px;
+    animation: swipe-down 0.7s ease-out forwards;
+}
+
+@keyframes swipe-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    list-style-type: none;
+
+    font-weight: bold;
+   
+}
+
+nav ul li {
+    padding: 10px 20px;
+    font-size: 150%;
+
+}
+
+.nav-link {
+    color: white !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color:  crimson !important; /* Adjust hover color */
+}
+
+.button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background: darkred;
+}
+
+
+.carousel-item {
+    height: 100vh;
+}
+
+.w-100-height {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.7; /* Lower the opacity of the background image */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px; /* Increase padding for more space */
+    border-radius: 10px;
+    width: 90%; /* Increase width */
+    max-width: 1000px; /* Increase maximum width */
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carousel-caption h5, .carousel-caption p, .carousel-caption button {
+    color: white;
+}
+
+.carousel-caption p {
+    font-size: 120%;
+}
+
+.carousel-caption button {
+    background: crimson;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-caption button:hover {
+    background: darkred;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+
+
+
+.about-section {
+    background: linear-gradient(to right, #f7f7f7, #eaeaea);
+    padding: 100px 0;
+    height: 100vh;
+}
+
+.about-img {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.about-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goals-section {
+    padding: 100px 0;
+    height: 100vh;
+    background-color: #f9f9f9;
+    animation: fade-in 1s ease-out forwards;
+}
+
+.goals-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.footer-section {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: crimson;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

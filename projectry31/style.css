@@ -1,0 +1,200 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.navbar {
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar.scrolled .nav-link {
+    color: #000;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.navbar.scrolled .logo {
+    transform: scale(0.9);
+}
+
+.carousel-item {
+    height: 100vh;
+   
+}
+
+.w-100-height {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px; /* Increase padding for more space */
+    border-radius: 10px;
+    width: 90%; /* Increase width */
+    max-width: 1000px; /* Increase maximum width */
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.carousel-caption h1 {
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.button {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.carousel-caption button:hover {
+    background: darkred;
+}
+
+
+.about-section {
+    background: linear-gradient(to right, #f7f7f7, #eaeaea);
+    padding: 100px 0;
+    height: 100vh;
+}
+
+.about-img {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.about-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goals-section {
+    padding: 100px 0;
+    height: 100vh;
+    background-color: #f9f9f9;
+    animation: fade-in 1s ease-out forwards;
+}
+
+.goals-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.footer-section {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: crimson;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

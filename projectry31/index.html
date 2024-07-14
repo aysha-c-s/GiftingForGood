@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>welcome page</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo" class="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mg-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Goals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <button class="button" onclick="location.href='login_form.php'">Login</button>
+          </div>
+        </div>
+      </nav>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- hero section -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/img1.jpg" class="d-block w-100-height" alt="img1">
+            <div class="carousel-caption carousel1">
+                <h1>Gifting For Good</h1>
+                <p>“Leftover food must be saved for the next time or it should be given to the
+                    needy; if there are no needy people, then it should be given to
+                    animals, even after it has dried out, for the one who is able to
+                    do that.” - Fatawa al-Lajnah Ad-Da'imah (22/341)</p>
+                <button class="button" onclick="location.href='register_form.php'">Join Us</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+     <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-6 about-img">
+                  <img src="images/img2.jpg" alt="About Us">
+              </div>
+              <div class="col-lg-6 about-text">
+                  <h2>About Us</h2>
+                  <p>Our mission is to make a positive impact on our community by providing essential services and support. We believe in the power of kindness and strive to build a better world together.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Goals Section -->
+  <section id="goals" class="goals-section">
+    <div class="container">
+        <h2>Our Goals</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Reduce Food Waste</h5>
+                        <p class="card-text">We aim to minimize food waste by creating awareness and promoting practices that save surplus food. Our goal is to ensure that no edible food goes to waste and is redirected to those in need.</p>
+                        <p class="card-text">Implementing community food banks and awareness campaigns.</p>
+                        <p class="card-text">To combat hunger and reduce environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Redistribution of Surplus Food</h5>
+                        <p class="card-text">We are committed to redistributing surplus food to those in need, ensuring that no edible food goes to waste. This helps to combat hunger and supports vulnerable communities.</p>
+                        <p class="card-text">Establishing food collection points and distribution networks.</p>
+                        <p class="card-text">To ensure food security and reduce food wastage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Promote Acts of Kindness</h5>
+                        <p class="card-text">Encouraging acts of kindness and generosity within our community helps to create a culture of compassion and empathy. We strive to inspire people to make a difference through small, meaningful actions.</p>
+                        <p class="card-text">Launching kindness initiatives and recognition programs.</p>
+                        <p class="card-text">To enhance the well-being and happiness of our community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="contact" class="footer-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <img src="images/logo-white-removebg-preview.png" alt="logo" class="footer-logo">
+          </div>
+          <div class="col-md-4">
+              <h5>Contact Us</h5>
+              <p>Email: info@example.com</p>
+              <p>Phone: +1234567890</p>
+          </div>
+          <div class="col-md-4">
+              <h5>Follow Us</h5>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Bx1LlKCB6W1Zq2NE6KPog+KzIm5G1DFmvvz0UlphZJw5fX2s4iLcA4roV9CQZvvT"
+      crossorigin="anonymous"></script>
+</body>
+</html>

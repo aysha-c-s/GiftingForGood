@@ -95,7 +95,6 @@
 </body>
 </html>
 
-
 <?php
      $servername = "localhost"; // Replace with your server name
      $username = "root"; // Replace with your MySQL username
@@ -142,13 +141,13 @@
       pid INT PRIMARY KEY AUTO_INCREMENT,
       uid INT NOT NULL,
       Area VARCHAR(50) NOT NULL,
-      Full_address VARCHAR(255) NOT NULL,
-      type VARCHAR(255) NOT NULL,
+      Full_address VARCHAR(250) NOT NULL,
+      type VARCHAR(250) NOT NULL,
       amout VARCHAR(50) NOT NULL,
-      short_description VARCHAR(500) null,
+      short_description VARCHAR(50) null,
       status VARCHAR(50) NOT NULL,
       Expire_date DATE NOT NULL,
-      photo VARCHAR(255) null
+      photo VARCHAR(50) null
   )";
 
     if ($conn->query($sql) != TRUE) {
