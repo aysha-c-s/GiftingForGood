@@ -1,0 +1,57 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .book {
+    background-color: #5a3f2b;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .main-text h1 {
+    color: #5a3f2b;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  .submit {
+    background-color: crimson;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit:hover {
+    background-color: darkred;
+  }
+  
+  .error-msg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+  }
+  
