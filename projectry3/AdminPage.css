@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+.navbar {
+    margin-bottom: 10px;
+}
+.hero-section {
+    text-align: center;
+    padding-top: 5%;
+    background-color: #007bff;
+    color: #fff;
+}
+.tabs-section {
+    padding: 20px 0;
+}
+.table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+
+.navbar .logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar .btn {
+    margin-left: 10px;
+}
+
+.hero-section {
+    height: 30vh;
+    background: url('/images/admin-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tabs-section {
+    padding: 50px 0;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.status {
+    padding: .2rem 0;
+    border-radius: 4rem;
+    text-align: center;
+    width: 60%;
+    margin-left: -20%;
+    margin-bottom: -50%;
+}
+
+.status.received {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.expired {
+
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.unclaimed {
+    background-color: #6fcaea;
+}
