@@ -19,8 +19,7 @@ if (isset($_POST['update'])) {
     $phn = $_POST['phn'];
     $ophn = $_POST['ophn'];
     $address = $_POST['address'];
-    $sql = "UPDATE users SET username='$name', email='$email', phone='$phn',optional_num='$ophn',address='$address' WHERE uid='$uid'"
-    ;
+    $sql = "UPDATE users SET username='$name', email='$email', phone='$phn',optional_num='$ophn',address='$address' WHERE uid='$uid'";
     $result = $conn->query($sql);
     if ($result == TRUE) {
         header("Location: profile.php?success=Your account has been updated successfully");
@@ -79,7 +78,7 @@ if (isset($_POST['change'])) {
         </h4>
 
         <div class="row no-gutters row-bordered row-border-light">
-            <div class="col-md-3 pt-0">
+            <!-- <div class="col-md-3 pt-0">
                 <div class="list-group list-group-flush account-settings-links">
                     <a class="list-group-item list-group-item-action active" data-toggle="list"
                         href="#account-general"></a>
@@ -89,7 +88,7 @@ if (isset($_POST['change'])) {
                         Change Password
                     </button>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-9">
                 <div class="tab-content">
                     <div class="tab-pane fade active show" id="account-general">
@@ -129,8 +128,19 @@ if (isset($_POST['change'])) {
                                 <div class="text-right mt-3">
                                     <input type="submit" value="Save Changes" name="update"
                                         class="btn btn-primary">&nbsp;
-                                    <button type="button" class="btn btn-default">Cancel</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='UserHome.php'">Home</button>
+									
+									<div style="float:left" class="list-group list-group-flush account-settings-links">
+										<a class="list-group-item list-group-item-action active" data-toggle="list"
+											href="#account-general"></a>
+										<button style="background-color:crimson; color:white; border-radius:4px" type="button"
+											class="list-group-item list-group-item-action" data-toggle="modal"
+											data-target="#changePasswordModal">
+											Change Password
+										</button>
+									</div>
                                 </div>
+								
 
                             </div>
                         </form>
